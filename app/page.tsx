@@ -18,7 +18,7 @@ export default function Home() {
       <ExperiencesPreview />
       <SustainabilityPreview />
       <Testimonials />
-      
+
       <Section variant="primary">
         <Container>
           <div className="text-center max-w-3xl mx-auto">
@@ -26,10 +26,11 @@ export default function Home() {
               Begin Your Journey with Pureland
             </h2>
             <p className="mb-8 text-lg opacity-90">
-              Discover exceptional stays across our collection of premium properties. 
-              Elevate your experience with personalized service and unforgettable moments.
+              Discover exceptional stays across our collection of premium
+              properties. Elevate your experience with personalized service and
+              unforgettable moments.
             </p>
-            <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+            <Button size="lg" variant="secondary" asChild>
               <Link href="/properties">Explore Our Properties</Link>
             </Button>
           </div>

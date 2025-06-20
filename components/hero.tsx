@@ -11,16 +11,16 @@ import { cn } from "@/lib/utils";
 const heroImages = [
   {
     src: "https://images.pexels.com/photos/1268871/pexels-photo-1268871.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "Luxury beachfront villa with infinity pool"
+    alt: "Luxury beachfront villa with infinity pool",
   },
   {
     src: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "Mountain resort with scenic views"
+    alt: "Mountain resort with scenic views",
   },
   {
-    src: "https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
-    alt: "Elegant urban hotel lobby"
-  }
+    src: "https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "Elegant urban hotel lobby",
+  },
 ];
 
 export function Hero() {
@@ -30,7 +30,7 @@ export function Hero() {
     const interval = setInterval(() => {
       setActiveIndex((current) => (current + 1) % heroImages.length);
     }, 6000);
-    
+
     return () => clearInterval(interval);
   }, []);
 
@@ -56,7 +56,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-black/40" />
         </div>
       ))}
-      
+
       {/* Hero Content */}
       <div className="relative h-full flex items-center justify-center text-white">
         <Container>
@@ -65,21 +65,22 @@ export function Hero() {
               Experience Tranquility with Pureland Hospitality
             </h1>
             <p className="text-lg md:text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Discover our collection of premium hotels, resorts, villas, and wellness retreats 
-              where luxury meets sustainability and cultural immersion.
+              Discover our collection of premium hotels, resorts, villas, and
+              wellness retreats where luxury meets sustainability and cultural
+              immersion.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" asChild>
                 <Link href="/properties">Explore Properties</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="secondary" asChild>
                 <Link href="#booking">Book Now</Link>
               </Button>
             </div>
           </div>
         </Container>
       </div>
-      
+
       {/* Image Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {heroImages.map((_, index) => (
@@ -87,7 +88,9 @@ export function Hero() {
             key={index}
             className={cn(
               "w-3 h-3 rounded-full transition-all",
-              index === activeIndex ? "bg-white scale-100" : "bg-white/50 scale-75"
+              index === activeIndex
+                ? "bg-white scale-100"
+                : "bg-white/50 scale-75"
             )}
             onClick={() => setActiveIndex(index)}
             aria-label={`Go to slide ${index + 1}`}
