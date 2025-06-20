@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 4%;
+    --primary: 142 71% 29%;
+    --primary-foreground: 144 100% 98%;
+    --secondary: 40 55% 94%;
+    --secondary-foreground: 35 40% 20%;
+    --muted: 60 5% 96%;
+    --muted-foreground: 20 14% 35%;
+    --accent: 35 90% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 5% 90%;
+    --input: 20 5% 90%;
+    --ring: 142 71% 29%;
+    --chart-1: 142 71% 29%;
+    --chart-2: 35 90% 45%;
+    --chart-3: 140 100% 18%;
+    --chart-4: 35 100% 30%;
+    --chart-5: 20 80% 85%;
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 20 14% 4%;
+    --foreground: 60 9% 98%;
+    --card: 20 14% 4%;
+    --card-foreground: 60 9% 98%;
+    --popover: 20 14% 4%;
+    --popover-foreground: 60 9% 98%;
+    --primary: 142 71% 25%;
+    --primary-foreground: 144 100% 98%;
+    --secondary: 40 8% 13%;
+    --secondary-foreground: 35 40% 90%;
+    --muted: 12 6% 15%;
+    --muted-foreground: 24 5% 65%;
+    --accent: 35 90% 35%;
+    --accent-foreground: 60 9% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 60 9% 98%;
+    --border: 12 6% 15%;
+    --input: 12 6% 15%;
+    --ring: 142 71% 25%;
+    --chart-1: 142 71% 35%;
+    --chart-2: 35 90% 50%;
+    --chart-3: 140 80% 30%;
+    --chart-4: 35 80% 40%;
+    --chart-5: 20 40% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  .font-serif {
+    font-family: var(--font-playfair), serif;
+  }
+  
+  /* Animation for fade in */
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer components {
+  /* Add custom component styles here */
+}
+
+@layer utilities {
+  /* Add custom utility styles here */
+}
