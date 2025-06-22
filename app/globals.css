@@ -44,7 +44,7 @@
     --chart-5: 20 80% 85%;
     --radius: 0.5rem;
   }
-  
+
   .dark {
     --background: 20 14% 4%;
     --foreground: 60 9% 98%;
@@ -80,16 +80,16 @@
   body {
     @apply bg-background text-foreground;
   }
-  
+
   .font-serif {
     font-family: var(--font-playfair), serif;
   }
-  
+
   /* Animation for fade in */
   .animate-fade-in {
     animation: fadeIn 1s ease-out forwards;
   }
-  
+
   @keyframes fadeIn {
     from {
       opacity: 0;
